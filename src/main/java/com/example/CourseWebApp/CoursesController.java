@@ -11,11 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CoursesController {
-    @RequestMapping("/courses")//(path="/courses",method = RequestMethod.GET)
+    @RequestMapping("/courses")
     public ModelAndView course(@RequestParam("cname") String coursename){                //Servlet request, URL
 
-        ModelAndView mv = new ModelAndView();                                                                         //URL
-        mv.addObject("cname",coursename);                                                                        //System.out.println("The course name is: " +cname);
+        ModelAndView mv = new ModelAndView();                                                                       
+        mv.addObject("cname",coursename);                                              
         mv.setViewName("course");
         return mv;
     }
